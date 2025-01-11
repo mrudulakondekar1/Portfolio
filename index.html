@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrudula Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ext.js" language="javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("");//goto https://dashboard.emailjs.com/admin add public key here
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const templateParams = {
+                user_name: name,
+                user_email: email,
+                message: message,
+            };
+
+            emailjs.send("serviceid", "templeteid", templateParams)///after giving public key add service key and templetekey
+                .then((response) => {
+                    alert("Message sent successfully!");
+                    console.log("Email sent:", response);
+                })
+                .catch((error) => {
+                    alert("Failed to send message. Please try again later.");
+                    console.error("EmailJS Error:", error);
+                });
+        }
+    </script>
+</head>
+<body>
+<header>
+    <a href="#" class="logo">Mrudula Photography</a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
+        <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="#portfolio" onclick="toggleMenu();">Portfolio</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+    </ul>
+</header>
+
+<section class="banner" id="home">
+    <div class="textBx">
+        <h2>Welcome to<br><span>Mrudula Photography</span></h2>
+        <h3>Capturing your moments beautifully</h3>
+        <a href="#portfolio" class="btn">View Portfolio</a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="heading">
+        <p>Discover My Story</p>
+        <h2>About Me</h2>
+        <div class="content">
+            <div class="w50">
+                <img src="images/image2.png" alt="Mrudula's Portrait" class="proPic">
+            </div>
+            <div class="contentBx w50">
+                <h3>Who am I?</h3>
+                <p>
+                    I'm <b>Mrudula</b>, a passionate professional photographer dedicated to capturing life’s most meaningful and memorable moments. My expertise spans various genres of photography, including weddings, fashion, maternity, and cultural events, each tailored to tell a unique story.
+                </p>
+                <p>
+                    For me, photography is more than just a medium—it's an art of storytelling that connects emotions, preserves memories, and showcases the world through a creative lens. Each click of the camera is a step toward creating timeless visuals that resonate with people.
+                </p>
+                <p>
+                    Whether it’s the elegance of a portrait, the raw beauty of street photography, or the vibrancy of celebrations, I bring creativity, precision, and professionalism to every project. My work aims to celebrate the essence of each subject, delivering images that are both artistic and meaningful.
+                </p>
+                <div class="headingbottom">
+                    <a href="MrudulaPhotographyResume.pdf" target="_blank" class="btn round">Download Portfolio</a>
+                    <!-- give you resume here and change gmail -->
+                    <div class="bt">
+                        <b>Name:</b> Mrudula Kondekar - Bhosale <br>
+                        <b>Email:</b> mrudulaphoto@gmail.com<br>
+                        <b>Location:</b> Pune, Maharashtra
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="section">
+        <div class="workheader" >
+            <h2>Portfolio</h2>
+        </div>
+        <div class="work">
+            
+            <article>
+                <h3>Fashion</h3>
+                <img src="images/fashion.png" alt="Fashion Portfolio">
+
+                <p>Showcasing your style and creativity with stunning, high-quality images.</p>
+            </article>
+            <article>
+                <h3>Maternity</h3>
+                <img src="images/maternity.png" alt="Maternity Portfolio">
+
+                <p>We specialize in creating intimate, creative, and beautiful memories for expecting mothers.</p>
+            </article>
+            <article>
+                <h3>Food</h3>
+                <img src="images/food.png" alt="Food Portfolio">
+
+                <p>Making your culinary creations look irresistible with professional food photography.</p>
+            </article>
+            <article>
+                <h3>Street Photography</h3>
+                <img src="images/street.png" alt="Street Photography Portfolio">
+
+                <p>Capturing the raw, unscripted moments of everyday life in urban settings.</p>
+            </article>
+            <article>
+                <h3>Fine Art</h3>
+                <img src="images/fineart.png" alt="Fine Art Portfolio">
+
+                <p>Creating visually captivating art that challenges perceptions and evokes emotions.</p>
+            </article>
+            <article>
+                <h3>Wildlife</h3>
+                <img src="images/wildlife.png" alt="Wildlife Portfolio">
+
+                <p>Capturing the beauty of nature and wildlife in their natural habitat.</p>
+            </article>
+            <article>
+                <h3>Travel & Landscape</h3>
+                <img src="images/image5.png" alt="Travel and Landscape Portfolio">
+
+                <p>Documenting the beauty of nature, cultures, and landscapes around the world.</p>
+            </article>
+            <article>
+                <h3>Weddings</h3>
+                <img src="images/wedding.png" alt="Wedding Portfolio">
+              
+                <p>Capturing the joy, emotions, and memories of your special day with timeless photos.</p>
+            
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="heading white">
+        <p>Feel free to contact me anytime</p>
+        <h2>Let's Connect</h2>
+    </div>
+    <div class="content">
+        <div class="contactInfo">
+            <h3>Contact Info</h3>
+            <p>
+                Available for weddings, events, and creative collaborations. Let's create something beautiful together!
+            </p>
+            <div class="contactInfoBx">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <address>Chinchwad, Pune, Maharashtra, India</address>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Phone Number</h3>
+                        <p>+91 7385281307</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email Address</h3>
+                        <p>mrudulaphoto@gmail.com</p>
+                    </div>
+                </div>
+                <h3>Social Connect</h3>
+                <div class="bxSocial">
+                    <div class="icon">
+                        <a href="https://www.instagram.com/cameragirl_mk" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.linkedin.com/in/mrudula-kondekar-704059218" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.threads.net/@cameragirl_mk" target="_blank">
+                            <i class='fa-brands fa-threads'></i>
+                        </a>
+                    </div>
+                    
+                </div>
+         </div>
+       
+    </div>
+    <div class="formBx">
+     <form id="contact-form" onsubmit="sendEmail(event);">
+<h3>Message Me</h3>
+<input type="text" id="name" name="user_name" placeholder="Full Name" required>
+<input type="email" id="email" name="user_email" placeholder="Email" required>
+<textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+<input type="submit" value="Send Message">
+    </form>
+        
+    </div>  
+        
+        
+    </div>
+
+</section>
+
+<footer class="copyright">
+    <p>&copy; 2025,Mrudula's Photography, Allrights reserved</p>
+</footer>
+
+
+</body>
+</html>
