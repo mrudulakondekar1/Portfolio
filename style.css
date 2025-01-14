@@ -267,7 +267,7 @@ color: #fff;
     font-size: 16px;
     background: transparent;
     border: none;
-    background: #b3aa9e;
+    background: #58462e;
     color: black;
     resize: vertical;
 }
@@ -281,7 +281,7 @@ color: #fff;
     color: bisque;
 }
 .formBx form input[type="submit"]{
-    background: #b3aa9e;
+    background: #58462e;
     max-width: 250px;
     cursor: pointer;
     font-weight: 600;
