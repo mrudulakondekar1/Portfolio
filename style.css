@@ -403,22 +403,24 @@ footer.copyright{
     cursor: pointer;
 }
 
-/* Back Button */
 .back-btn {
-    display: block;
-    text-align: center;
-    margin: 20px auto;
-    width: fit-content;
+    position: fixed; /* Fixed position to stay visible */
+    top: 20px; /* Distance from top */
+    left: 20px; /* Distance from left */
     padding: 10px 20px;
-    background: #222;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     transition: background 0.3s ease;
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .back-btn:hover {
-    background: #555;
+    background: rgba(255, 255, 255, 0.3); /* Light effect on hover */
+    color: #000;
 }
 
 
