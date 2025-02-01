@@ -8,13 +8,33 @@
 </head>
 <body>
     <h1>Fashion Photography Portfolio</h1>
+
     <div class="gallery">
-        <img src="images/image1.png" alt="Fashion Photo 1">
-        <img src="images/image2.png" alt="Fashion Photo 2">
-        <img src="images/image3.png" alt="Fashion Photo 3">
-        <img src="images/image4.png" alt="Fashion Photo 4">
-        <img src="images/image5.png" alt="Fashion Photo 5">
+        <img src="images/image1.png" alt="Fashion Photo 1" onclick="openLightbox(this)">
+        <img src="images/image2.png" alt="Fashion Photo 2" onclick="openLightbox(this)">
+        <img src="images/image3.png" alt="Fashion Photo 3" onclick="openLightbox(this)">
+        <img src="images/image4.png" alt="Fashion Photo 4" onclick="openLightbox(this)">
+        <img src="images/image5.png" alt="Fashion Photo 5" onclick="openLightbox(this)">
     </div>
-    <a href="index.html">Back to Home</a>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <!-- Back to Portfolio Button -->
+    <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
 </body>
 </html>
