@@ -403,11 +403,11 @@ footer.copyright{
     color: white;
     cursor: pointer;
 }
-
+/* Back Button - Visible Everywhere */
 .back-btn {
-    position: fixed; /* Fixed position to stay visible */
-    top: 20px; /* Distance from top */
-    left: 20px; /* Distance from left */
+    position: fixed; /* Always visible */
+    top: 20px; 
+    left: 20px;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     color: white;
@@ -415,15 +415,25 @@ footer.copyright{
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
-    transition: background 0.3s ease;
-    z-index: 1000; /* Ensure it stays above other elements */
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 9999; /* Highest priority so it stays on top */
 }
 
 .back-btn:hover {
-    background: rgba(255, 255, 255, 0.3); /* Light effect on hover */
+    background: rgba(255, 255, 255, 0.3);
     color: #000;
+    transform: scale(1.1);
 }
 
+/* Ensure it adapts well on mobile screens */
+@media (max-width: 768px) {
+    .back-btn {
+        top: 10px;
+        left: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 
 
 @media (max-width: 991px)
