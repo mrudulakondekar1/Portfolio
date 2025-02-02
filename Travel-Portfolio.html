@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Travel Photography Portfolio</h1>
+
+    <div class="gallery">
+        <img src="images/creative1.jpg" alt="Travel Photo 1" onclick="openLightbox(this)">
+        <img src="images/creative2.jpg" alt="Travel Photo 2" onclick="openLightbox(this)">
+        <img src="images/creative3.jpg" alt="Travel Photo 3" onclick="openLightbox(this)">
+        <img src="images/creative4.jpg" alt="Travel Photo 4" onclick="openLightbox(this)">
+        <img src="images/creative5.jpg" alt="Travel Photo 5" onclick="openLightbox(this)">
+        <img src="images/creative6.jpg" alt="Travel Photo 6" onclick="openLightbox(this)">
+        <img src="images/creative7.jpg" alt="Travel Photo 7" onclick="openLightbox(this)">
+        <img src="images/creative8.jpg" alt="Travel Photo 8" onclick="openLightbox(this)">
+        <img src="images/creative9.jpg" alt="Travel Photo 9" onclick="openLightbox(this)">
+        <img src="images/creative10.jpg" alt="Travel Photo 10" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <!-- Back to Portfolio Button -->
+    <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
