@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Wedding Photography Portfolio</h1>
+
+    <div class="gallery">
+        <img src="images/wedding1.jpg" alt="Wedding Photo 1" onclick="openLightbox(this)">
+        <img src="images/wedding2.jpg" alt="Wedding Photo 2" onclick="openLightbox(this)">
+        <img src="images/wedding3.jpg" alt="Wedding Photo 3" onclick="openLightbox(this)">
+        <img src="images/wedding4.jpg" alt="Wedding Photo 4" onclick="openLightbox(this)">
+        <img src="images/wedding5.jpg" alt="Wedding Photo 5" onclick="openLightbox(this)">
+        <img src="images/wedding6.jpg" alt="Wedding Photo 6" onclick="openLightbox(this)">
+        <img src="images/wedding7.jpg" alt="Wedding Photo 7" onclick="openLightbox(this)">
+        <img src="images/wedding8.jpg" alt="Wedding Photo 8" onclick="openLightbox(this)">
+        <img src="images/wedding9.jpg" alt="Wedding Photo 9" onclick="openLightbox(this)">
+        <img src="images/wedding10.jpg" alt="Wedding Photo 10" onclick="openLightbox(this)">
+        <img src="images/wedding11.jpg" alt="Wedding Photo 11" onclick="openLightbox(this)">
+        <img src="images/wedding12.jpg" alt="Wedding Photo 12" onclick="openLightbox(this)">
+        <img src="images/wedding13.jpg" alt="Wedding Photo 13" onclick="openLightbox(this)">
+        <img src="images/wedding14.jpg" alt="Wedding Photo 14" onclick="openLightbox(this)">
+        <img src="images/wedding15.jpg" alt="Wedding Photo 15" onclick="openLightbox(this)">
+        <img src="images/wedding16.jpg" alt="Wedding Photo 16" onclick="openLightbox(this)">
+        <img src="images/wedding17.jpg" alt="Wedding Photo 17" onclick="openLightbox(this)">
+        <img src="images/wedding18.jpg" alt="Wedding Photo 18" onclick="openLightbox(this)">
+        <img src="images/wedding19.jpg" alt="Wedding Photo 19" onclick="openLightbox(this)">
+        <img src="images/wedding20.jpg" alt="Wedding Photo 20" onclick="openLightbox(this)">
+        <img src="images/wedding21.jpg" alt="Wedding Photo 21" onclick="openLightbox(this)">
+        <img src="images/wedding22.jpg" alt="Wedding Photo 22" onclick="openLightbox(this)">
+        <img src="images/wedding23.jpg" alt="Wedding Photo 23" onclick="openLightbox(this)">
+        <img src="images/wedding24.jpg" alt="Wedding Photo 24" onclick="openLightbox(this)">
+        <img src="images/wedding25.jpg" alt="Wedding Photo 25" onclick="openLightbox(this)">
+        <img src="images/wedding26.jpg" alt="Wedding Photo 26" onclick="openLightbox(this)">
+        <img src="images/wedding27.jpg" alt="Wedding Photo 27" onclick="openLightbox(this)">
+        <img src="images/wedding28.jpg" alt="Wedding Photo 28" onclick="openLightbox(this)">
+        <img src="images/wedding29.jpg" alt="Wedding Photo 29" onclick="openLightbox(this)">
+        <img src="images/wedding30.jpg" alt="Wedding Photo 30" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <!-- Back to Portfolio Button -->
+    <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
