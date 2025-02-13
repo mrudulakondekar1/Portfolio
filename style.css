@@ -357,10 +357,12 @@ footer.copyright{
 }
 /* Styling for Gallery */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 15px;
+    justify-items: center;
+    margin-top: 20px;
+    
 }
 
 .gallery img {
