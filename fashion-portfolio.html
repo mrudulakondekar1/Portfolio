@@ -4,18 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
 </head>
 <body>
     <h1>Fashion Photography Portfolio</h1>
-
-    <div class="gallery">
-        <img src="images/image1.png" alt="Fashion Photo 1" onclick="openLightbox(this)">
-        <img src="images/image2.png" alt="Fashion Photo 2" onclick="openLightbox(this)">
-        <img src="images/image3.png" alt="Fashion Photo 3" onclick="openLightbox(this)">
-        <img src="images/image4.png" alt="Fashion Photo 4" onclick="openLightbox(this)">
-        <img src="images/image5.png" alt="Fashion Photo 5" onclick="openLightbox(this)">
+    <style>
+        /* Animation on hover */
+        .gallery img {
+            transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+            grid-template-columns: repeat(3, 1fr); 
+        }
+    
+        .gallery img:hover {
+            transform: scale(1.1)  ;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    </style>
+     <div class="container mt-4">
+        <div class="row gallery">
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion1.jpg" alt="Fashion Photo 1" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion2.jpg" alt="Fashion Photo 2" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion3.jpg" alt="Fashion Photo 3" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion4.jpg" alt="Fashion Photo 4" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion5.jpg" alt="Fashion Photo 5" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion6.jpg" alt="Fashion Photo 6" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion7.jpg" alt="Fashion Photo 7" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion8.jpg" alt="Fashion Photo 8" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion9.jpg" alt="Fashion Photo 9" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion10.jpg" alt="Fashion Photo 10" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion11.jpg" alt="Fashion Photo 11" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion12.jpg" alt="Fashion Photo 12" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion13.jpg" alt="Fashion Photo 13" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion14.jpg" alt="Fashion Photo 14" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion15.jpg" alt="Fashion Photo 15" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion16.jpg" alt="Fashion Photo 16" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion17.jpg" alt="Fashion Photo 17" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion18.jpg" alt="Fashion Photo 18" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion19.jpg" alt="Fashion Photo 19" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion20.jpg" alt="Fashion Photo 20" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion21.jpg" alt="Fashion Photo 21" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion22.jpg" alt="Fashion Photo 22" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion23.jpg" alt="Fashion Photo 23" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion24.jpg" alt="Fashion Photo 24" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion25.jpg" alt="Fashion Photo 25" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion27.jpg" alt="Fashion Photo 27" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion28.jpg" alt="Fashion Photo 28" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion29.jpg" alt="Fashion Photo 29" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion30.jpg" alt="Fashion Photo 30" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <img src="images/fashion26.jpg" alt="Fashion Photo 26" class="img-fluid rounded shadow">
+            </div>
+      
+      
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
 
    <!-- Back to Portfolio Button -->
 
