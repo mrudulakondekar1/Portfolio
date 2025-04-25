@@ -10,6 +10,41 @@
 section{
 padding: 80px; 
 }
+.wedding-slider .slide-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wedding-slider .slide-img {
+    width: 100%;
+    display: block;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wedding-slider .img1 {
+    z-index: 1;
+    opacity: 1;
+}
+
+.wedding-slider:hover .img1 {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.wedding-slider .img2 {
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.wedding-slider:hover .img2 {
+    opacity: 1;
+    transform: translateX(0%);
+}
 /*banner*/
 .banner{
     position: relative;
